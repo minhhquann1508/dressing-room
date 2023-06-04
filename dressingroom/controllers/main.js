@@ -26,7 +26,7 @@ const renderListItem = (category,type,length) => {
                 <div class="item px-4 py-4">
                     <div class="item-img">
                         <img
-                        src="../assets/images/${category}/${type}${i}_show.jpg"
+                        src="./dressingroom/assets/images/${category}/${type}${i}_show.jpg"
                         class="img-fluid img-${i}"
                         alt=""
                         />
@@ -51,14 +51,14 @@ window.addEventListener("DOMContentLoaded", function () {
 const changeOutfit = (i,category,type) => {
     const name = document.querySelector(`.name-${i}`).textContent;
     if(type != 'background') {
-        const img = `../assets/images/${category}/${type}${i}.png`;
+        const img = `/dressingroom/assets/images/${category}/${type}${i}.png`;
         let choseItem = new ChoseItem (name,img,type);
         testItems.addNewItem(choseItem);
         testItems.renderOutfit();
         console.log(testItems.list);
     }
     else {
-        const img = `../assets/images/${category}/${type}${i}.jpg`;
+        const img = `/dressingroom/assets/images/${category}/${type}${i}.jpg`;
         let choseItem = new ChoseItem (name,img,type);
         testItems.addNewItem(choseItem);
         testItems.renderOutfit();
